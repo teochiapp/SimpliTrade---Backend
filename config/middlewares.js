@@ -5,8 +5,13 @@ module.exports = [
     name: 'strapi::cors',
     config: {
       enabled: true,
-      headers: '*',
-      origin: ['http://localhost:3000', 'http://localhost:3001']
+      headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
+      methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
+      origin: [
+        'https://simplitrade.surcodes.com',    // Frontend en producción
+        'http://localhost:3000',               // Frontend desarrollo
+        'http://localhost:3001'                // Frontend desarrollo alternativo
+      ]
     }
   },
   'strapi::poweredBy',
