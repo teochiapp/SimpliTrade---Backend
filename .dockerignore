@@ -15,5 +15,3 @@ dist/
 database/*.db
 database/*.sqlite
 !database/migrations/
-package-lock.json
-!package-lock.json.lock
